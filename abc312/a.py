@@ -13,3 +13,9 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+S = input()
+
+res = ["ACE","BDF","CEG","DFA","EGB","FAC","GBD"]
+
+ans = S in res
+print('Yes') if ans else print('No')

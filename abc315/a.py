@@ -13,3 +13,17 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+S = input()
+
+dels = "aeiou"
+
+res = []
+for s in S:
+    flg = False
+    for d in dels:
+        if s == d:
+            flg = True
+    if not flg:
+        res.append(s)
+
+print("".join(res))

@@ -13,3 +13,18 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+
+M = int(input())
+D = list(map(int, input().split()))
+
+allday = []
+
+for m in range(M):
+    for d in range(D[m]):
+        allday.append((m,d))
+
+idx = len(allday) // 2
+
+res = allday[idx]
+
+print(res[0]+1, res[1]+1)

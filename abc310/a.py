@@ -13,3 +13,13 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+
+N, P,Q = map(int, input().split())
+
+D = list(map(int, input().split()))
+
+
+if (P-Q) > min(D):
+    print(Q+min(D))
+else:
+    print(P)
