@@ -13,3 +13,12 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+
+N = int(input())
+X = list(map(int, input().split()))
+
+X = sorted(X)
+
+Y = X[N:len(X)-N]
+
+print(sum(Y) / (3*N))

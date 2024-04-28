@@ -1,11 +1,17 @@
+# import math
+# import itertoos
+# import collections
+#
 # N = int(input())
 # N, M = map(int, input().split())
 #
 # A = list(map(int, input().split()))
 #
-# B = []
+# B = [None] * N
 # for i in range(N):
 #     B.append(int(input()))
+#
+# S = input()
 #
 # S = []
 # for i in range(N):
@@ -13,10 +19,3 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
-S = input()
-
-Su = S.upper()
-
-for i in range(len(S)):
-    if S[i] == Su[i]:
-        print(i+1)

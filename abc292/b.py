@@ -13,3 +13,24 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+N,Q = map(int, input().split())
+event = [None] * Q
+
+for i in range(Q):
+    event[i] = list(map(int, input().split()))
+
+sensyu = [0] * N
+
+for e in event:
+    if e[0] == 1:
+        sensyu[e[1] - 1] += 1
+    if e[0] == 2:
+        sensyu[e[1] - 1] += 2
+    if e[0] == 3:
+        if sensyu[e[1] - 1] >= 2:
+            print("Yes")
+        else:
+            print("No")
+
+
+
