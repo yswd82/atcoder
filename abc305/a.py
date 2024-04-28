@@ -13,3 +13,14 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+N = int(input())
+
+prev_ = (N // 5)*5
+next_ = (N // 5+1)*5
+
+if N - prev_ < next_ - N:
+    print(prev_)
+else:
+    print(next_)
+
+

@@ -13,3 +13,7 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+N = int(input())
+S = input()
+
+print("".join([s+s for s in S]))

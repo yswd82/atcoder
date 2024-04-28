@@ -13,3 +13,14 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+from decimal import Decimal
+
+A,B = map(int, input().split())
+
+A = Decimal(A)
+B = Decimal(B)
+
+if A % B == 0:
+    print(A // B)
+else:
+    print(A // B + 1)

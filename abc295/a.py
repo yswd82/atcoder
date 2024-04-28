@@ -13,3 +13,13 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+N = int(input())
+W = input().split()
+
+words = ["and", "not", "that", "the", "you"]
+
+for w in W:
+    if w in words:
+        print("Yes")
+        exit()
+print("No")

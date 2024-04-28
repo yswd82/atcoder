@@ -13,3 +13,16 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+
+N,D = map(int, input().split())
+
+T = list(map(int, input().split()))
+
+last = T[0]
+for i in range(1, N):
+    if (T[i] - last) <= D:
+        print(T[i])
+        exit()
+    else:
+        last = T[i]
+print(-1)

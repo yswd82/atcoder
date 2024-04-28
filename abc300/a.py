@@ -13,3 +13,10 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+
+N,A,B = map(int, input().split())
+C = list(map(int, input().split()))
+
+ans = C.index(A+B)
+
+print(ans+1)
