@@ -13,3 +13,11 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+S = input()
+T = input()
+
+for i in range(len(S) - len(T) + 1):
+    if S[i:i+len(T)] == T:
+        print('Yes')
+        exit()
+print('No')

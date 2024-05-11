@@ -13,3 +13,11 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+A, B = map(int, input().split())
+
+print(A**B)
+
+
+
+
+print()

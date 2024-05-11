@@ -13,3 +13,11 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+
+N, K = map(int, input().split())
+A = list(map(int, input().split()))
+
+for i in range(K):
+    A.pop(0)
+    A.extend([0])
+print(*A)

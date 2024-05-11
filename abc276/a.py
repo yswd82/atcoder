@@ -13,3 +13,10 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+S = input()
+
+ans = -1
+for i in range(len(S)):
+    if S[i] == 'a':
+        ans = i+1
+print(ans)

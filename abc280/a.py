@@ -13,3 +13,14 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+H,W = map(int, input().split())
+S = [0] * H
+for i in range(H):
+    S[i] = list(input())
+
+cnt=0
+for i in range(H):
+    for j in range(W):
+        if S[i][j] == '#':
+            cnt+=1
+print(cnt)

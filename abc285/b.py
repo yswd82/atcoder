@@ -13,3 +13,14 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+
+N:int = int(input())
+S:str = input()
+
+for i in range(1, N):
+    l_max = 0
+    for l in range(N-i):
+        if all([S[k] != S[k+i] for k in range(l)]):
+            l_max = max(l_max, l)
+
+    print(l_max)

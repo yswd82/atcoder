@@ -13,3 +13,9 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+K = int(input())
+
+a = 65
+
+s = ''.join([chr(65+i) for i in range(K)])
+print(s)

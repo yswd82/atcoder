@@ -13,3 +13,10 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+N = int(input())
+S = [None] * N
+for i in range(N):
+    S[i] = input()
+
+for j in range(N):
+    print(S[N-1-j])

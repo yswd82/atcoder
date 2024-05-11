@@ -13,3 +13,7 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+N = int(input())
+
+for i in range(N+1):
+    print(N-i)

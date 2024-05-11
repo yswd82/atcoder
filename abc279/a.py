@@ -13,3 +13,12 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+S = input()
+
+cnt = 0
+for s in S:
+    if s == 'v':
+        cnt+=1
+    if s == 'w':
+        cnt+=2
+print(cnt)
