@@ -13,3 +13,7 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+s = input()
+t = input()
+
+print('Yes') if s == t[:len(s)] else print('No')

@@ -1,28 +1,34 @@
 # N = int(input())
 # N, M = map(int, input().split())
-#
+
 # A = list(map(int, input().split()))
-#
+
 # B = []
 # for i in range(N):
 #     B.append(int(input()))
-#
+
 # S = []
 # for i in range(N):
 #     S.append(input())
-#
+
 # ans = False
 # print('Yes') if ans else print('No')
 
 N = int(input())
-H = list(map(int, input().split()))
-
-highest = -1
-hmax = 0
-
+A = [0] * N
+B = [0] * N
 for i in range(N):
-    if H[i] > hmax:
-        highest = i+1
-        hmax = H[i]
+    A[i], B[i] = map(int, input().split())
 
-print(highest)
+# iが一番上にいる場合の高さをCとする
+C = [0] * N
+Cmax = 0
+Asum = sum(A)
+for i in range(N):
+    C[i] = Asum - A[i] + B[i]
+
+    if Cmax < C[i]:
+        Cmax = C[i]
+
+print(Cmax)
+

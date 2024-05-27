@@ -1,15 +1,9 @@
-# N = int(input())
-# N, M = map(int, input().split())
+A,B = map(int, input().split())
+if 0 < A and B == 0:
+    ans = 'Gold'
+elif A==0 and 0 < B:
+    ans = 'Silver'
+elif 0 < A and 0 < B:
+    ans = 'Alloy'
 
-# A = list(map(int, input().split()))
-
-# B = []
-# for i in range(N):
-#     B.append(int(input()))
-
-# S = []
-# for i in range(N):
-#     S.append(input())
-
-# ans = False
-# print('Yes') if ans else print('No')
+print(ans)

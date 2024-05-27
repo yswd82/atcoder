@@ -13,3 +13,12 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+N = int(input())
+
+def func(n):
+    if n == 0:
+        return 1
+    else:
+        return n * func(n-1)
+
+print(func(N))

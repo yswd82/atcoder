@@ -1,15 +1,15 @@
-# N = int(input())
-# N, M = map(int, input().split())
+N = int(input())
+A = list(map(int, input().split()))
+X = int(input())
 
-# A = list(map(int, input().split()))
+tA = sum(A)
 
-# B = []
-# for i in range(N):
-#     B.append(int(input()))
+d = X % tA
 
-# S = []
-# for i in range(N):
-#     S.append(input())
+s = 0
+for i in range(N):
+    s += A[i]
 
-# ans = False
-# print('Yes') if ans else print('No')
+    if s > d:
+        print(X // tA * N + i + 1)
+        exit()

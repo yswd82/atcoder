@@ -1,25 +1,7 @@
-# N = int(input())
-# N, M = map(int, input().split())
+K = int(input())
+A, B = input().split()
 
-# A = list(map(int, input().split()))
+Ad = int(A, K)
+Bd = int(B, K)
 
-# B = []
-# for i in range(N):
-#     B.append(int(input()))
-
-# S = []
-# for i in range(N):
-#     S.append(input())
-
-# ans = False
-# print('Yes') if ans else print('No')
-s = list(map(int, list(input())))
-
-ans = False
-if s[0] == s[1] == s[2] == s[3]:
-    ans = True
-
-if all([(s[i] + 1)%10 == s[i+1] for i in range(3)]):
-    ans = True
-
-print('Weak') if ans else print('Strong')
+print(Ad*Bd)
