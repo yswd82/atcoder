@@ -13,3 +13,6 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+A,B,C,D,E,F = map(int, input().split())
+
+print((A*B*C - D*E*F)%998244353)
