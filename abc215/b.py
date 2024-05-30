@@ -1,4 +1,4 @@
-# N = int(input())
+N = int(input())
 # N, M = map(int, input().split())
 
 # A = list(map(int, input().split()))
@@ -13,3 +13,9 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+k = 0
+while True:
+    if 2 ** k <= N < 2 **(k+1):
+        break
+    k+=1
+print(k)

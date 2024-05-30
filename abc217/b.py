@@ -13,3 +13,13 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+contests =  ['ABC' , 'ARC' , 'AGC' , 'AHC']
+s1 = input()
+s2 = input()
+s3 = input()
+
+contests.remove(s1)
+contests.remove(s2)
+contests.remove(s3)
+
+print(contests[0])

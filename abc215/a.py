@@ -13,3 +13,10 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+S = input()
+
+if S == 'Hello,World!':
+    print('AC')
+else:
+    print('WA')
+    

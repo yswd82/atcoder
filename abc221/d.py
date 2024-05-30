@@ -1,3 +1,4 @@
+# N = int(input())
 # N, M = map(int, input().split())
 
 # A = list(map(int, input().split()))
@@ -12,8 +13,3 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
-N = int(input())
-S = input()
-
-print('Yes' if S[N-1] == 'o' else 'No')
-

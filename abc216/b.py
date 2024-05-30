@@ -13,3 +13,17 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+n = int(input())
+s = [0]*n
+t = [0]*n
+
+for i in range(n):
+    s[i], t[i] = input().split()
+
+for i in range(n):
+    for j in range(n):
+        if i!=j and s[i] == s[j] and t[i] == t[j]:
+            ans = True
+            print('Yes')
+            exit()
+print('No')

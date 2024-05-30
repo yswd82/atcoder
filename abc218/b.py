@@ -1,7 +1,7 @@
 # N = int(input())
 # N, M = map(int, input().split())
 
-# A = list(map(int, input().split()))
+P = list(map(int, input().split()))
 
 # B = []
 # for i in range(N):
@@ -13,3 +13,7 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+
+
+S = [chr(65+32+p-1) for p in P]
+print(''.join(S))
