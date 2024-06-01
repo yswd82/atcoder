@@ -13,3 +13,12 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+s,t,x = map(int, input().split())
+
+if t <= s:
+    t += 24
+
+if s <= x < t or s<= x+24 < t:
+    print('Yes')
+else:
+    print('No')

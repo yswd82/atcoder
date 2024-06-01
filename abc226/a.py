@@ -13,3 +13,10 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+from decimal import Decimal, ROUND_HALF_UP
+
+X = float(input())
+
+a = Decimal(X).quantize(Decimal('0'), ROUND_HALF_UP)
+
+print(a)

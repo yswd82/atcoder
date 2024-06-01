@@ -13,3 +13,9 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+n = int(input())
+
+if 42 <= n:
+    n += 1
+
+print(f'AGC{n:03}')

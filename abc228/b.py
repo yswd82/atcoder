@@ -13,3 +13,23 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+
+n,x = map(int, input().split())
+a = list(map(int, input().split()))
+
+known = set()
+known.add(x)
+next = x
+
+checked = set()
+
+while True:
+    if next -1 in checked:
+        break
+
+    checked.add(next-1)
+    known.add(next)
+
+    next = a[next-1]
+
+print(len(known))

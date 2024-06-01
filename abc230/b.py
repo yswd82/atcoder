@@ -13,3 +13,11 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+S = input()
+
+T = 'oxx' * 100000
+
+if S in T:
+    print('Yes')
+else:
+    print('No')
