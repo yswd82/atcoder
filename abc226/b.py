@@ -13,3 +13,14 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+
+n = int(input())
+l = [None] * n
+a = set()
+for i in range(n):
+    tmp = list(map(int, input().split()))
+    l[i] = tmp[0]
+    t = tuple(tmp[1:])
+    a.add(t)
+
+print(len(a))
