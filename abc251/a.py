@@ -13,3 +13,8 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+s = input()
+
+s = s * 6
+ans = s[:6]
+print(ans)

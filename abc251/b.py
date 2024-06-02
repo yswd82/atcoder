@@ -13,3 +13,16 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+n,w = map(int, input().split())
+a = list(map(int, input().split()))
+
+from itertools import combinations
+ansset = set()
+for i in range(3):
+    comb = list(combinations(a,i+1))
+    for c in comb:
+      seisu = sum(c)
+      if seisu <= w:
+          ansset.add(seisu)
+print(len(ansset))
+

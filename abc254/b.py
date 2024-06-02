@@ -13,3 +13,12 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+n=int(input())
+
+from math import *
+
+def calc(k):
+    return [ factorial(k)/(factorial(i)*factorial(k-i)) for i in range(k+1)]
+
+for i in range(n):
+    print(*map(int, calc(i)))

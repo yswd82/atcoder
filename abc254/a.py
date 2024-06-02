@@ -13,3 +13,5 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+n=int(input())
+print(f'{n%100:02}')

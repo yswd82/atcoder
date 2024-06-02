@@ -13,3 +13,13 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+n,k=map(int, input().split())
+a=list(map(int, input().split()))
+b=list(map(int, input().split()))
+oisisamax=0
+oisisamax=max(a)
+ans = False
+for i in range(n):
+    if a[i] == oisisamax and i+1 in b:
+        ans = True
+print('Yes') if ans else print('No')

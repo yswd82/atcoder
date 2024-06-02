@@ -13,3 +13,9 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+a,b,c=map(int, input().split())
+if a <= b <= c or c<=b<=a:
+    ans = True
+else:
+    ans = False
+print('Yes') if ans else print('No')
