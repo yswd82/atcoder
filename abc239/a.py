@@ -13,18 +13,10 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
+h=int(input())
+
 import math
 
-n = int(input())
-x=[0]*n
-y=[0]*n
-for i in range(n):
-    x[i], y[i] = map(int, input().split())
+horizon = math.sqrt(h * (h + 12800000))
 
-maxlen=0
-
-for i in range(n):
-    for j in range(i, n):
-        maxlen = max(math.sqrt((x[i] - x[j])**2 + (y[i] - y[j])**2 ), maxlen)
-
-print(maxlen)
+print(horizon)

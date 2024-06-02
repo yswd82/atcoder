@@ -13,18 +13,12 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
-import math
+abc = input()
 
-n = int(input())
-x=[0]*n
-y=[0]*n
-for i in range(n):
-    x[i], y[i] = map(int, input().split())
+a = int(abc[0])
+b = int(abc[1])
+c = int(abc[2])
 
-maxlen=0
+ans = (a+b+c)*100+(a+b+c)*10+(a+b+c)
 
-for i in range(n):
-    for j in range(i, n):
-        maxlen = max(math.sqrt((x[i] - x[j])**2 + (y[i] - y[j])**2 ), maxlen)
-
-print(maxlen)
+print(ans)

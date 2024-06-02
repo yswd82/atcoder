@@ -13,3 +13,22 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+n,a,b = map(int, input().split())
+
+allmap = [[None] * b*n for _ in range(a*n) ]
+
+for i in range(a*n):
+    for j in range(b*n):
+        if i//a % 2 == 0:
+            if j//b % 2 == 0:
+                allmap[i][j] = '.'
+            else:
+                allmap[i][j] = '#'    
+        else:
+            if j//b % 2 == 0:
+                allmap[i][j] = '#'
+            else:
+                allmap[i][j] = '.'    
+
+for i in range(a*n):
+    print("".join(allmap[i]))

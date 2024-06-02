@@ -13,18 +13,15 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
-import math
-
 n = int(input())
-x=[0]*n
-y=[0]*n
-for i in range(n):
-    x[i], y[i] = map(int, input().split())
+h = list(map(int, input().split()))
 
-maxlen=0
+maxh = h[0]
 
-for i in range(n):
-    for j in range(i, n):
-        maxlen = max(math.sqrt((x[i] - x[j])**2 + (y[i] - y[j])**2 ), maxlen)
+for i in range(1,n):
+    if h[i-1] < h[i]:
+        maxh = max(maxh, h[i])
+    else:
+        break
 
-print(maxlen)
+print(maxh)

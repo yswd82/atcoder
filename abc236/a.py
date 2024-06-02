@@ -13,18 +13,10 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
-import math
+s=input()
+a,b=map(int, input().split())
 
-n = int(input())
-x=[0]*n
-y=[0]*n
-for i in range(n):
-    x[i], y[i] = map(int, input().split())
+sl = list(s)
 
-maxlen=0
-
-for i in range(n):
-    for j in range(i, n):
-        maxlen = max(math.sqrt((x[i] - x[j])**2 + (y[i] - y[j])**2 ), maxlen)
-
-print(maxlen)
+sl[b-1], sl[a-1] = sl[a-1],sl[b-1]
+print("".join(sl))

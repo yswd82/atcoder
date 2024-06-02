@@ -13,18 +13,11 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
-import math
-
-n = int(input())
-x=[0]*n
-y=[0]*n
-for i in range(n):
-    x[i], y[i] = map(int, input().split())
-
-maxlen=0
-
-for i in range(n):
-    for j in range(i, n):
-        maxlen = max(math.sqrt((x[i] - x[j])**2 + (y[i] - y[j])**2 ), maxlen)
-
-print(maxlen)
+a,b,c,x = map(int,input().split())
+if x <= a:
+    ans = 1
+elif a+1 <= x <= b:
+    ans = c / (b-a)
+else:
+    ans = 0
+print(ans)

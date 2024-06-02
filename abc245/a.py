@@ -13,18 +13,11 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
-import math
+a,b,c,d=map(int, input().split())
+taka = a*3600 + b*60
+aoki = c*3600 + d*60 + 1
 
-n = int(input())
-x=[0]*n
-y=[0]*n
-for i in range(n):
-    x[i], y[i] = map(int, input().split())
-
-maxlen=0
-
-for i in range(n):
-    for j in range(i, n):
-        maxlen = max(math.sqrt((x[i] - x[j])**2 + (y[i] - y[j])**2 ), maxlen)
-
-print(maxlen)
+if taka < aoki:
+    print('Takahashi')
+else:
+    print('Aoki')

@@ -13,18 +13,15 @@
 
 # ans = False
 # print('Yes') if ans else print('No')
-import math
+n=int(input())
+a = list(map(int, input().split()))
 
-n = int(input())
-x=[0]*n
-y=[0]*n
-for i in range(n):
-    x[i], y[i] = map(int, input().split())
+cards = [0] * n
 
-maxlen=0
+for _ in a:
+    cards[_-1] += 1
 
-for i in range(n):
-    for j in range(i, n):
-        maxlen = max(math.sqrt((x[i] - x[j])**2 + (y[i] - y[j])**2 ), maxlen)
-
-print(maxlen)
+for i,c in enumerate(cards):
+    if c == 3:
+        print(i+1)
+        exit()
