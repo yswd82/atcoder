@@ -19,20 +19,21 @@ V = [0] * M
 for i in range(M):
     U[i], V[i] = map(int, input().split())
 
+edge = dict()
+for u,v in zip(U,V):
+    edge.update({(u-1,v-1):1})
 
+answer = []
 
-def next_edge(n):
-    ans = []
-    for i in range(M):
-        if U[i]==n:
-            ans.append(V[i])
-    return ans
-
-Z =[ set([i+1]) for i in range(N)]
-
-for i in range(M):
-    Z[U[i]-1].add(V[i])
-    Z[V[i]-1].add(U[i])
-print(Z)
-ans = set([tuple(z) for z in Z if len(z) == 3])
-print(len(ans))
+for a in range(N):
+    for b in range(a,N):
+        for c in range(b,N):
+            ans = 0
+            for x in [(a,b),(b,c),(a,c)]:
+                try:
+                    ans += edge[x]
+                except:
+                    pass
+                if ans == 3:
+                    answer.append((a,b,c))
+print(len(answer))

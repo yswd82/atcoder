@@ -13,3 +13,9 @@
 #
 # ans = False
 # print('Yes') if ans else print('No')
+n = int(input())
+
+mod = 998244353
+
+ans = n % mod
+print(ans)
